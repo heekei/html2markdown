@@ -4,9 +4,6 @@
         <title>HTML转换Markdown</title>
         <meta charset="UTF-8">
         <style>
-            html,body{
-                
-            }
             .clearfix:before,.clearfix:after{
                 display:table;
                 clear:both;
