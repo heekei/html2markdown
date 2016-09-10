@@ -128,7 +128,7 @@
                     return mk;
                 },
                 imgTag:function(mk){
-                    var imgtag = /<img\s*.*?(src=["|'](.*?)["|']).*?(alt=["|'](.*?)["|'])?.*?[\/]?>/;
+                    var imgtag = /<img\s*.*?(src=["|'](.*?)["|']).*?(alt=["|'](.*?)["|'])?.*?[\/]?>/gi;
                         mk = mk.replace(imgtag,function($0,$1,$2,$3,$4){
                             if(typeof $3!="undefined"){
                                 var res = "!["+$4+"]("+$2+")";
