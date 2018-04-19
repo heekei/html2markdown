@@ -1,5 +1,5 @@
-(function (window) {
-    window.html2mk = {
+(function () {
+    var html2mk = {
         delRN: function (mk) {
             mk = mk.replace(/[\r\n]/g, "") // 去除回车、换行符
             return mk;
@@ -87,11 +87,21 @@
             return mk;
         }
     };
-    window.convert = function (html) {
+    var convert = function (html) {
         var mk = html;
         for (x in html2mk) {
             mk = html2mk[x](mk);
         }
         return mk;
     }
-})(window)
+    if (typeof module !== 'undefined' && typeof module.exports !== 'undefined') {
+        module.exports = convert;
+    }
+    if (typeof define === 'function' && define.amd) {
+        define('html2mk', [], function () {
+            return convert;
+        });
+    } else {
+        window.html2mk = convert;
+    }
+})()
