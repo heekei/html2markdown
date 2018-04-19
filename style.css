@@ -1,0 +1,56 @@
+html,
+body {}
+
+.clearfix:before,
+.clearfix:after {
+    display: table;
+    clear: both;
+    content: "";
+}
+
+#InputBox {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    text-align: center;
+}
+
+.tarea {
+    position: relative;
+    display: inline-block;
+    width: 49%;
+    height: 300px;
+    padding: 0;
+    resize: none;
+    -webkit-resize: none;
+    -moz-resize: none;
+    -o-resize: none;
+    -ms-resize: none;
+}
+
+.convert {
+    border: none;
+    background-color: lightblue;
+    width: 10rem;
+    height: 4rem;
+    outline: none;
+}
+
+.convert:active {
+    border: inset 2px #fff;
+}
+
+@media screen and (max-width:615px) {
+    .tarea {
+        position: relative;
+        display: inline-block;
+        width: 100%;
+        height: 200px;
+        padding: 0;
+        resize: none;
+        -webkit-resize: none;
+        -moz-resize: none;
+        -o-resize: none;
+        -ms-resize: none;
+    }
+}
